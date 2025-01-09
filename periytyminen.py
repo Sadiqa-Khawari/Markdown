@@ -32,7 +32,9 @@ class Person():
         age = datetime.datetime.now() - birthDay
         ageInYears = age.days / 365
         return round(ageInYears)
-
+    
+    # Luokkametodi on myös staattinen, eli ei vaadi olion muodostamista
+    # Huomaa luokkaan viittaava cls, joka korvaa perinteisen self:n
     @classmethod
     def calculateAge2(cls, birthday):
         """Calculates student's current age in fuul years
